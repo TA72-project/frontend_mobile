@@ -1,5 +1,7 @@
 import { Suspense, lazy } from 'react';
 import type { RouteObject } from 'react-router';
+import MainLayout from './layouts/MainLayout';
+import LoadingScreen from './components/LoadingScreen';
 const Loadable = (Component: any) => (props: JSX.IntrinsicAttributes) =>
   (
     <Suspense fallback={<LoadingScreen />}>
@@ -9,7 +11,7 @@ const Loadable = (Component: any) => (props: JSX.IntrinsicAttributes) =>
 
 
 //  *HOME PAGE
-const Home = Loadable(lazy(() => import('./views/Home')));
+const Home = Loadable(lazy(() => import('./pages/Home')));
 
 const routes: RouteObject[] = [
   {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Outlet } from 'react-router-dom';
 import experimentalStyled from '@mui/styled-engine';
 import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -17,8 +18,9 @@ const MainLayoutRoot = experimentalStyled('div')(({ theme }: any) => ({
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <Navigation />
+      <Header />
       <div className="w-full flex-grow">{children ?? <Outlet />}</div>
+      <Navigation />
     </div>
   );
 };

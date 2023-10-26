@@ -18,10 +18,10 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import NotificationIcon from '@mui/icons-material/Notifications';
 import { colors } from '@mui/material';
 
-const Navigation = () => {
+const Header = () => {
   return (
-    <nav className="fixed w-11/12 bottom-4 left-0 rl-auto mx-4">
-      <div className="bg-white dark:bg-gray-900  px-8 border-gray-200 dark:border-gray-600 max-w-screen-xl flex flex-wrap border-b sm:w-11/12 lg:w-8/12 md:w-10/12 xl:w-6/12 z-20 mt-5 items-center justify-between mx-auto p-2 rounded-2xl">
+    <nav className="fixed w-full top-0 left-0 rl-auto">
+      <div className=" dark:bg-gray-900  px-8  dark:border-gray-600 max-w-screen-xl flex flex-wrap border-b sm:w-11/12 lg:w-8/12 md:w-10/12 xl:w-6/12 z-20 mt-5 items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TA 72</span>
         </a>
@@ -56,4 +56,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Header;

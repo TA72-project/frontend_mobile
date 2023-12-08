@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Color Variables
+$primary-color-light: #AC99D4;
+$primary-color-dark: rgba(137, 93, 229, 0.94);;
+
+$secondary-color-light: rgba(229, 93, 158, 0.38);
+$secondary-color-dark: rgba(229, 93, 158, 0.96);
+
+$background-color-light: #ecf0f1;
+$background-color-dark: #2c3e50;
+
+$text-color-light: #333;
+$text-color-dark: #ecf0f1;
+
+$accent-color-light: #6F54A8;
+$accent-color-dark: #4B3680;
+
+// Font Styles
+$base-font-family: 'Arial', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+// Surface Styles
+$border-radius: 5px;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+// Light Theme
+$theme: (
+  primary-color: $primary-color-light,
+  secondary-color: $secondary-color-light,
+  background-color: $background-color-light,
+  text-color: $text-color-light,
+  accent-color: $accent-color-light
+);
+
+// Dark Theme
+$theme-dark: (
+  primary-color: $primary-color-dark,
+  secondary-color: $secondary-color-dark,
+  background-color: $background-color-dark,
+  text-color: $text-color-dark,
+  accent-color: $accent-color-dark
+);
+
+.light {
+	@each $key, $value in $theme {
+		--#{$key}: #{$value};
+	}
+}
+
+.dark {
+	@each $key, $value in $theme-dark {
+		--#{$key}: #{$value};
+	}
+}
+
+.image-canvas {
+	background-color:  map-get($theme, primary-color);
+}
+
+.image-canvas-2 {
+	background-color:  map-get($theme, secondary-color);
+}
+
+.text-p-1 {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.text-l-1 {
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.text-p-2 {
+	font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;;
+}
+
+.rounded-max-1 {
+	border-radius: 50px;
+}
+
+.button-primary-cm {
+	background-color: map-get($theme, accent-color);
+	color: map-get($theme, background-color);
+	@apply rounded-max-1;
+}
+
+.input-primary-cm {
+	border: 1.5px solid map-get($theme, accent-color);
+	background-color: #FFF;
+	border-radius: 15px;
+}
+
+.cgu-card {
+	background-color: map-get($theme, accent-color);
+	border-radius: 25px;
+	margin: 2rem 2rem;
+}
+
+.back-button {
+	border-radius: 25px;
+	padding: 5px;
+	border: 1.5px solid map-get($theme, text-color);
+}
+
+.app-bar {
+	background-color: map-get($theme, background-color);
+}
+
+.navigation-bar {
+	background-color: map-get($theme, background-color);
+	border-top:1.5px  solid map-get($theme, text-color);
+}
+
+:root{
+	background-color: map-get($theme, background-color);
+}

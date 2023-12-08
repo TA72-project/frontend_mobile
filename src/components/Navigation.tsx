@@ -1,59 +1,62 @@
-import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import NotificationIcon from '@mui/icons-material/Notifications';
-import { colors } from '@mui/material';
+import * as React from "react";
+import { ReactComponent as HomeIconLight } from "../assets/icons/home-2.svg";
+import { ReactComponent as HomeIconBold } from "../assets/icons/home.svg";
+import { ReactComponent as NoteLigth } from "../assets/icons/archive-book.svg";
+import { ReactComponent as NoteBold } from "../assets/icons/archive-book-2.svg";
+import { ReactComponent as CalendarLight } from "../assets/icons/calendar-4.svg";
+import { ReactComponent as CalendarBold } from "../assets/icons/calendar-2.svg";
+import { ReactComponent as ProfileLight } from "../assets/icons/user.svg";
+import { ReactComponent as ProfileBold } from "../assets/icons/user-1.svg";
+import { ReactComponent as MessageLight } from "../assets/icons/message-text-1.svg";
+import { ReactComponent as MessageBold } from "../assets/icons/message-text-2.svg";
 
 const Navigation = () => {
-  return (
-    <nav className="fixed w-11/12 bottom-4 left-0 rl-auto mx-4">
-      <div className="bg-white dark:bg-gray-900  px-8 border-gray-200 dark:border-gray-600 max-w-screen-xl flex flex-wrap border-b sm:w-11/12 lg:w-8/12 md:w-10/12 xl:w-6/12 z-20 mt-5 items-center justify-between mx-auto p-2 rounded-2xl">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TA 72</span>
-        </a>
-
-        <div className="flex md:order-2">
-          <Box sx={{ display: { md: 'flex' } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-              sx={{ color: colors.grey[50] }}
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              color="inherit"
-              sx={{ color: colors.grey[50] }}
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-        </div>
-
-      </div>
-    </nav>
-  );
+	return (
+		<nav className="fixed w-full bottom-0 left-0 rl-auto navigation-bar">
+			<div className="grid grid-rows-1 grid-flow-col gap-2 py-5">
+				<div className="col-span-1">
+					<div className="grid grid-rows-2 justify-items-center">
+						<div className="row">
+							<HomeIconBold />	
+						</div>
+						<div className="row">Home</div>
+					</div>
+				</div>
+				<div className="col-span-1 ">
+					<div className="grid grid-rows-2 justify-items-center">
+						<div className="row">
+							<NoteLigth />
+						</div>
+						<div className="row">Notes</div>
+					</div>
+				</div>
+				<div className="col-span-1 ">
+					<div className="grid grid-rows-2 justify-items-center">
+						<div className="row">
+							<MessageLight />
+						</div>
+						<div className="row">Messages</div>
+					</div>
+				</div>
+				<div className="col-span-1 ">
+					<div className="grid grid-rows-2 justify-items-center">
+						<div className="row">
+							<CalendarLight />
+						</div>
+						<div className="row">Schedule</div>
+					</div>
+				</div>
+				<div className="col-span-1 ">
+					<div className="grid grid-rows-2 justify-items-center">
+						<div className="row">
+							<ProfileLight />
+						</div>
+						<div className="row">Profile</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	);
 };
 
 export default Navigation;

@@ -35,7 +35,7 @@ const Navigation = () => {
 						<div className="row">
 							<MessageLight />
 						</div>
-						<div className="row text-sm-1">Messages</div>
+						<div className="row text-sm-1">Dm</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">
@@ -43,7 +43,7 @@ const Navigation = () => {
 						<div className="row">
 							<CalendarLight />
 						</div>
-						<div className="row text-sm-1">Schedule</div>
+						<div className="row text-sm-1">Plan</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">

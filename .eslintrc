@@ -5,6 +5,7 @@
   },
   "extends": [
     "react-app",
+		"recommended",
     "plugin:react-hooks/recommended"
   ],
   "plugins": [

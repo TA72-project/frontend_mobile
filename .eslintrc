@@ -4,8 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "react-app",
-		"recommended",
+    // "plugin:react-app",
+		// "recommended",
     "plugin:react-hooks/recommended"
   ],
   "plugins": [

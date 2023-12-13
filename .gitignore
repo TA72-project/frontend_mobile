@@ -24,3 +24,5 @@ yarn-error.log*
 
 # React Component Preview
 previewConfig.json
+
+package-lock.json

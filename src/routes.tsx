@@ -2,6 +2,8 @@ import { Suspense, lazy } from 'react';
 import type { RouteObject } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import LoadingScreen from './components/LoadingScreen';
+import HomeLayout from './layouts/HomeLayout';
+import Notification from './pages/Notifications';
 const Loadable = (Component: any) => (props: JSX.IntrinsicAttributes) =>
   (
     <Suspense fallback={<LoadingScreen />}>
@@ -20,7 +22,7 @@ const EditProfile = Loadable(lazy(() => import('./pages/profile/EditProfile')));
 const routes: RouteObject[] = [
   {
     path: '*',
-    element: <MainLayout title='' />,
+    element: <HomeLayout />,
     children: [
       {
         index: true,
@@ -35,6 +37,16 @@ const routes: RouteObject[] = [
   {
     path: '/cgu',
         element: <CguPage />,
+  },
+  {
+    path: '/notifications',
+    element: <MainLayout title='Notifications' />,
+    children: [
+      {
+        index: true,
+        element: <Notification />,
+      },
+    ],
   },
   {
     path: '/profile',

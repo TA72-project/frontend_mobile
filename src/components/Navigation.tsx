@@ -19,7 +19,7 @@ const Navigation = () => {
 						<div className="row">
 							<HomeIconBold />
 						</div>
-						<div className="row">Home</div>
+						<div className="row text-sm-1">Home</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">
@@ -27,7 +27,7 @@ const Navigation = () => {
 						<div className="row">
 							<NoteLigth />
 						</div>
-						<div className="row">Notes</div>
+						<div className="row text-sm-1">Notes</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">
@@ -35,7 +35,7 @@ const Navigation = () => {
 						<div className="row">
 							<MessageLight />
 						</div>
-						<div className="row">Messages</div>
+						<div className="row text-sm-1">Messages</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">
@@ -43,7 +43,7 @@ const Navigation = () => {
 						<div className="row">
 							<CalendarLight />
 						</div>
-						<div className="row">Schedule</div>
+						<div className="row text-sm-1">Schedule</div>
 					</div>
 				</div>
 				<div className="col-span-1 ">
@@ -51,7 +51,7 @@ const Navigation = () => {
 						<div className="row">
 							<ProfileLight />
 						</div>
-						<div className="row">Profile</div>
+						<div className="row text-sm-1">Profile</div>
 					</div>
 				</div>
 			</div>

@@ -13,11 +13,11 @@ import { ReactComponent as MessageBold } from "../assets/icons/message-text-2.sv
 const Navigation = () => {
 	return (
 		<nav className="fixed w-full bottom-0 left-0 rl-auto navigation-bar">
-			<div className="grid grid-rows-1 grid-flow-col gap-2 py-5">
+			<div className="grid grid-rows-1 grid-flow-col gap-2 py-5 px-4">
 				<div className="col-span-1">
 					<div className="grid grid-rows-2 justify-items-center">
 						<div className="row">
-							<HomeIconBold />	
+							<HomeIconBold />
 						</div>
 						<div className="row">Home</div>
 					</div>

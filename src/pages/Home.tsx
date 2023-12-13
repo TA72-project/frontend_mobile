@@ -21,7 +21,7 @@ const Home = () => {
 
 	return (
 		<div className="">
-			<div className="grid mt-24 mb-24 mx-6">
+			<div className="grid mt-12 mb-24 mx-6">
 				<div className="grid grid-rows-1 justify-items-stretch  grid-flow-col">
 					<div className="col grid justify-items-start my-auto text-p-1">Bonjour John</div>
 					<div className="col grid justify-items-end">

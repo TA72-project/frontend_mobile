@@ -1,12 +1,15 @@
 import React from "react";
 import { ReactComponent as Edit } from "../../assets/icons/edit-2.svg";
+import userProfile from "../../assets/images/profile.png";
 
 const Profile = () => {
 	return (
 		<div className=" md:mx-2 mt-20">
 			<div className="grid md:grid-cols-2 mt-12">
 				<div className="image-canvas-3 col-span-2 xl:col-span-2 shadow-md my-4 sm:w-11/12 lg:w-8/12 md:w-10/12 xl:w-6/12 md:w8/12 mx-auto p-4 md:p-8 rounded-2xl bg-gray-100 mt-8">
-					<div className="d-inlive w-14 h-14"></div>
+					<div className="d-inlive w-14 h-14">
+					<img src={userProfile} alt="" />
+					</div>
 				</div>
 			</div>
 			<div className="col-span-1 mb-4">

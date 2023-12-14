@@ -49,12 +49,12 @@ const Schedule = () => {
 		const toFormat = time.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", hour12: false });
 		const twoDigitHour = toFormat.split(":")[0];
 		const startTime = Number(twoDigitHour); // Start time in hours
-		const endTime = startTime + 3; // End time in hours
+		const endTime = startTime + 3 // End time in hours
 		const slotDuration = 30; // Time slot duration in minutes
 
 		for (let hour = startTime; hour < endTime; hour++) {
 			for (let minute = 0; minute < 60; minute += slotDuration) {
-				const formattedTime = `${hour < 10 ? "0" : ""}${hour}h${minute === 0 ? "00" : minute}`;
+				const formattedTime = `${hour < 10 ? "0" : ""}${hour % 24}h${minute === 0 ? "00" : minute}`;
 				const isCurrentTime = currentTime.getHours() === hour && currentTime.getMinutes() === minute;
 
 				timeSlots.push(
@@ -86,6 +86,7 @@ const Schedule = () => {
 					<div className="grid col">{generateTimeSlots(currentTime)}</div>
 				</div>
 				<div className="grid col col-span-12">
+					<div className="tickBar"></div>
 					<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100 mt-2">
 						<div className="my-3 mx-2 flex justify-center  md:justify-end"></div>
 					</div>

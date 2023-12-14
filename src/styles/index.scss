@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 // Color Variables
-$primary-color-light: #AC99D4;
-$primary-color-dark: rgba(137, 93, 229, 0.94);;
+$primary-color-light: #ac99d4;
+$primary-color-dark: rgba(137, 93, 229, 0.94);
 
 $secondary-color-light: rgba(229, 93, 158, 0.38);
 $secondary-color-dark: rgba(229, 93, 158, 0.96);
@@ -15,11 +15,11 @@ $background-color-dark: #2c3e50;
 $text-color-light: #333;
 $text-color-dark: #ecf0f1;
 
-$accent-color-light: #6F54A8;
-$accent-color-dark: #4B3680;
+$accent-color-light: #6f54a8;
+$accent-color-dark: #4b3680;
 
 // Font Styles
-$base-font-family: 'Arial', sans-serif;
+$base-font-family: "Arial", sans-serif;
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
@@ -27,24 +27,24 @@ $base-line-height: 1.5;
 $border-radius: 5px;
 $box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-$canvas-color: #2E2939;
+$canvas-color: #2e2939;
 
 // Light Theme
 $theme: (
-  primary-color: $primary-color-light,
-  secondary-color: $secondary-color-light,
-  background-color: $background-color-light,
-  text-color: $text-color-light,
-  accent-color: $accent-color-light
+	primary-color: $primary-color-light,
+	secondary-color: $secondary-color-light,
+	background-color: $background-color-light,
+	text-color: $text-color-light,
+	accent-color: $accent-color-light,
 );
 
 // Dark Theme
 $theme-dark: (
-  primary-color: $primary-color-dark,
-  secondary-color: $secondary-color-dark,
-  background-color: $background-color-dark,
-  text-color: $text-color-dark,
-  accent-color: $accent-color-dark
+	primary-color: $primary-color-dark,
+	secondary-color: $secondary-color-dark,
+	background-color: $background-color-dark,
+	text-color: $text-color-dark,
+	accent-color: $accent-color-dark,
 );
 
 .light {
@@ -60,15 +60,15 @@ $theme-dark: (
 }
 
 .image-canvas {
-	background-color:  map-get($theme, primary-color);
+	background-color: map-get($theme, primary-color);
 }
 
 .image-canvas-2 {
-	background-color:  map-get($theme, secondary-color);
+	background-color: map-get($theme, secondary-color);
 }
 
 .image-canvas-3 {
-	background-color:  $canvas-color;
+	background-color: $canvas-color;
 	border-radius: 15px;
 	padding: 15px;
 	img {
@@ -98,9 +98,9 @@ $theme-dark: (
 
 .text-p-2 {
 	font-size: 15px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 
 .text-sm-1 {
@@ -140,14 +140,14 @@ line-height: normal;
 
 .input-primary-cm {
 	border: 1.5px solid map-get($theme, accent-color);
-	background-color: #FFF;
+	background-color: #fff;
 	border-radius: 15px;
 }
 
 .input-secondary-cm {
 	border-radius: 0px;
 	background-color: map-get($theme, background-color);
-	border-bottom: 1.5px solid
+	border-bottom: 1.5px solid;
 }
 
 .cgu-card {
@@ -174,13 +174,44 @@ line-height: normal;
 
 .navigation-bar {
 	background-color: map-get($theme, background-color);
-	border-top:1.5px  solid #59595973 ;
+	border-top: 1.5px solid #59595973;
 }
 
-:root{
+:root {
 	background-color: map-get($theme, background-color);
 }
 
 .top-margin {
 	margin-top: 8rem;
+}
+
+.tickBar {
+	position: relative;
+	background-color: #e82c2c;
+	height: 1px;
+	display: block;
+}
+
+.nav-svg {
+	// Change fill color
+	// Change stroke color and width
+	path {
+		stroke: map-get($theme, text-color);
+		stroke-width: 1px;
+	}
+}
+
+
+.navigation-bar {
+	.selected {
+		.text-sm-1{
+			color: map-get($theme, accent-color);
+		}
+		.nav-svg {
+			path{
+				fill: map-get($theme, accent-color);
+				stroke-width: 0px;
+			}
+	}
+	}
 }

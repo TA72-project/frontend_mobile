@@ -1,8 +1,16 @@
 import React from "react";
 import { ReactComponent as Edit } from "../../assets/icons/edit-2.svg";
 import userProfile from "../../assets/images/profile.png";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+
+	const navigate = useNavigate();
+
+	const goToEditProfile = () => {
+		navigate("/profile/edit");
+	}
+
 	return (
 		<div className=" md:mx-2 mt-20">
 			<div className="grid md:grid-cols-2 mt-12">
@@ -49,7 +57,7 @@ const Profile = () => {
 						<p className="text-p-3">Réglages</p>
 					</div>
 					<div className="row my-2">
-						<button className="w-full py-4 px-8 button-primary-cl text-p-3">
+						<button className="w-full py-4 px-8 button-primary-cl text-p-3" onClick={goToEditProfile}>
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Modifier le profil</div>
 								<div className="col grid justify-items-end"><Edit/></div>
@@ -57,20 +65,20 @@ const Profile = () => {
 						</button>
 					</div>
 					<div className="row my-2">
-						<button className="w-full py-4 px-8 button-primary-cl text-p-3">
+						<div className="w-full py-4 px-8 button-primary-cl text-p-3">
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Thème</div>
 								<div className="col grid justify-items-end"><Edit/></div>
 							</div>
-						</button>
+						</div>
 					</div>
 					<div className="row my-2">
-						<button className="w-full py-4 px-8 button-primary-cl text-p-3">
+						<div className="w-full py-4 px-8 button-primary-cl text-p-3">
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Langue</div>
 								<div className="col grid justify-items-end"><Edit/></div>
 							</div>
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -9,8 +9,12 @@ import { RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import { ReactComponent as Bell } from "../assets/icons/notification-1.svg";
 import { ReactComponent as Calendar } from "../assets/icons/calendar-1.svg";
 import Schedule from "../components/Schedule";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+		const navigate = useNavigate();
+
 
 	  // Get the current date
 		const currentDate = new Date();
@@ -18,13 +22,18 @@ const Home = () => {
 		// Format the current date
 		const formattedDate = currentDate.toLocaleDateString('fr-FR', { month: 'long', day: 'numeric' });
 
+		const goToNotification = () => {
+			navigate("/notifications");
+		}
+
+
 	return (
 		<div className="">
 			<div className="grid mt-12 mb-24 mx-6">
 				<div className="grid grid-rows-1 justify-items-stretch  grid-flow-col">
 					<div className="col grid justify-items-start my-auto text-p-1">Bonjour John</div>
 					<div className="col grid justify-items-end">
-						<button className=" py-3 px-3 button-secondary-cl text-p-2">
+						<button className=" py-3 px-3 button-secondary-cl text-p-2" onClick={goToNotification}>
 							<div className="">
 								<Bell />
 							</div>

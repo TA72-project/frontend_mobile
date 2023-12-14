@@ -186,9 +186,13 @@ $theme-dark: (
 }
 
 .tickBar {
-	position: relative;
+	position: absolute;
 	background-color: #e82c2c;
 	height: 1px;
+	width: 72%;
+	right: 3px;
+	margin-right: 12px;
+	margin-top: 55%;
 	display: block;
 }
 

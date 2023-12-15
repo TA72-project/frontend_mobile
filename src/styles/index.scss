@@ -89,6 +89,13 @@ $theme-dark: (
 	font-weight: 700;
 	line-height: normal;
 }
+
+.text-p-3x {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
 .text-l-1 {
 	font-size: 15px;
 	font-style: normal;
@@ -189,7 +196,7 @@ $theme-dark: (
 	position: absolute;
 	background-color: #e82c2c;
 	height: 1px;
-	width: 72%;
+	width: 76%;
 	right: 3px;
 	margin-right: 12px;
 	margin-top: 10%;

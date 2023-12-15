@@ -1,6 +1,7 @@
 import React from "react";
 import Schedule from "../components/Schedule";
 import { ReactComponent as Calendar } from "../assets/icons/calendar-1.svg";
+import ScheduleDay from "../components/ScheduleDay";
 
 const Plan = () => {
 
@@ -26,7 +27,7 @@ const Plan = () => {
 						</button>
 					</div>
 				</div>
-			<Schedule/>
+			<ScheduleDay/>
 			</div>
 	</div>;
 };

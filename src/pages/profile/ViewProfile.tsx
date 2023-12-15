@@ -57,7 +57,7 @@ const Profile = () => {
 						<p className="text-p-3">Réglages</p>
 					</div>
 					<div className="row my-2">
-						<button className="w-full py-4 px-8 button-primary-cl text-p-3" onClick={goToEditProfile}>
+						<button className="w-full py-4 px-8 button-primary-cl text-p-3x" onClick={goToEditProfile}>
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Modifier le profil</div>
 								<div className="col grid justify-items-end"><Edit/></div>
@@ -65,7 +65,7 @@ const Profile = () => {
 						</button>
 					</div>
 					<div className="row my-2">
-						<div className="w-full py-4 px-8 button-primary-cl text-p-3">
+						<div className="w-full py-4 px-8 button-primary-cl text-p-3x">
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Thème</div>
 								<div className="col grid justify-items-end"><Edit/></div>
@@ -73,7 +73,7 @@ const Profile = () => {
 						</div>
 					</div>
 					<div className="row my-2">
-						<div className="w-full py-4 px-8 button-primary-cl text-p-3">
+						<div className="w-full py-4 px-8 button-primary-cl text-p-3x">
 							<div className="grid grid-rows-1 justify-items-stretch grid-flow-col">
 								<div className="col grid justify-items-start">Langue</div>
 								<div className="col grid justify-items-end"><Edit/></div>

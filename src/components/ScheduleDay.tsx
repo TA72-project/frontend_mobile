@@ -1,8 +1,12 @@
+import { SettingsFlowState } from "@ory/client";
 import React, { useState, useEffect } from "react";
+
 
 const ScheduleDay = () => {
 	// Get the current date
 	const currentDate = new Date();
+
+	const [date, setDate] = useState(new Date());
 
 	const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -19,8 +23,8 @@ const ScheduleDay = () => {
 	const getDaysArray = () => {
 		const daysArray = [];
 		for (let i = -3; i <= 3; i++) {
-			const day = new Date(currentDate);
-			day.setDate(currentDate.getDate() + i);
+			const day = new Date(date);
+			day.setDate(date.getDate() + i);
 			daysArray.push(day);
 		}
 		return daysArray;
@@ -68,12 +72,26 @@ const ScheduleDay = () => {
 		return timeSlots;
 	};
 
+	const changeDate = (date: Date) => {
+		generateTimeSlots(date);
+	}
+
+	const choseDate = (index: number) => {
+		setDate(daysArray[index]);
+	}
+
+	// update the page with effect
+	useEffect(() => {
+		changeDate(date);
+		console.log(date);
+	}, [date]);
+
 	return (
 		<div>
 			<div className="grid col row-span-7 grid-rows-7 grid-flow-col">
 				{/* Map over the array of dates and create a button for each date */}
 				{daysArray.map((day, index) => (
-					<button key={index} className={`row row-span-1 py-4 px-1 ${index === 3 ? "button-primary-ln" : "btn"} text-p-2`} onClick={() => console.log(`Button clicked for ${index}`)}>
+					<button key={index} className={`row row-span-1 py-4 px-1 ${index === 3 ? "button-primary-ln" : "btn"} text-p-2`} onClick={() => choseDate(index)}>
 						<div className="col">
 							<div className="row">{formatDateString(day)}</div>
 							<div className="row">{formatWeekDayString(day)}</div>

@@ -11,6 +11,8 @@ import { ReactComponent as Calendar } from "../assets/icons/calendar-1.svg";
 import Schedule from "../components/Schedule";
 import { useNavigate } from "react-router-dom";
 
+
+
 const Home = () => {
 
 		const navigate = useNavigate();
@@ -25,6 +27,7 @@ const Home = () => {
 		const goToNotification = () => {
 			navigate("/notifications");
 		}
+
 
 
 	return (
@@ -53,21 +56,13 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
+				<div className="row  text-p-3 mt-2 mb-4">Actuellement</div>
+				<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100 mb-6">
+					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
+				</div>
 			<Schedule/>
-			<div className="row  text-p-3 mt-6 mb-4">Actuellement</div>
-				<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100">
-					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
-				</div>
+
 				<div className="row  text-p-3 mt-6 mb-4">Notifications</div>
-				<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100 mt-2">
-					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
-				</div>
-				<div className=" shadow-md  rounded-2xl image-canvas-2 bg-gray-100 mt-2">
-					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
-				</div>
-				<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100 mt-2">
-					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
-				</div>
 				<div className=" shadow-md  rounded-2xl image-canvas bg-gray-100 mt-2">
 					<div className="mt-16 mx-2 h-8 flex justify-center  md:justify-end"></div>
 				</div>
